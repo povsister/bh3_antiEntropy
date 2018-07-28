@@ -80,8 +80,8 @@ function post_achievement_in_event(eventNode, now_galgame, now_scene){
 }
 
 function systemAutoSave(now_galgame, now_scene){
-	setCookie(now_galgame_tag, now_galgame);
-	setCookie(now_scene_tag, now_scene);
+    setCookie(now_galgame_tag, now_galgame);
+    setCookie(now_scene_tag, now_scene);
 }
 
 function pa(sceneList, now_galgame) {
@@ -104,7 +104,7 @@ function pa(sceneList, now_galgame) {
     }
 }
 
-for (let i = 24; i <= 26; i++) {
+for (let i = 1; i <= 26; i++) {
     galgame(i);
 }
 ```
@@ -114,7 +114,7 @@ for (let i = 24; i <= 26; i++) {
 仅在Chrome 66.0.3359.139 上测试通过
 其他浏览器不保证兼容性
 
-部分代码摘抄自米忽悠前端
+部分代码摘抄自米忽悠前端，风格不保证统一
 
 ## License
 

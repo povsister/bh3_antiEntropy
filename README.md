@@ -5,8 +5,9 @@ A js script to auto-get all collections for bh3 Anti-Entropy adventure game
 
 ## Usage
 
-* 获取自己游戏帐号的auth_key与sign hash
+* 获取自己游戏帐号的auth_key与sign hash，可以[参考这里](http://bbs.ngacn.cc/read.php?tid=14608507)
 * 使用浏览器登录 https://event.bh3.com/avgAntiEntropy/index.php?auth_key=XXX&sign=XXX
+* （建议）随意点开一章，阅读几页，以便自动初始化部分全局变量
 * F12进入开发者模式
 * 在Console键入以下js代码并回车
 ```
@@ -58,7 +59,7 @@ function loadXmlFile(xmlFile)
 }
 
 function galgame(name){
-	let i,j;
+    let i,j;
     let now_galgame  = Number(name);
     let xmlDoc = loadXmlFile("./lang_CN/xml/ch"+name+".xml?sid="+Math.random());
 
@@ -111,8 +112,7 @@ for (let i = 1; i <= 26; i++) {
 
 ## Notice
 
-仅在Chrome 66.0.3359.139 上测试通过
-其他浏览器不保证兼容性
+仅在Chrome 66.0.3359.139 上测试通过。其他浏览器不保证兼容性
 
 部分代码摘抄自米忽悠前端，风格不保证统一
 

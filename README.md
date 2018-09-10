@@ -5,7 +5,7 @@ A js script to auto-get all collections for bh3 Anti-Entropy adventure game
 
 ## Usage
 
-* 获取自己游戏帐号的auth_key与sign hash，可以[参考这里](http://bbs.ngacn.cc/read.php?tid=14608507)
+* 获取自己游戏帐号的auth_key与sign hash，可以[参考这里](http://bbs.nga.cn/read.php?tid=14608507)
 * 使用浏览器(Chrome kernel)登录 https://event.bh3.com/avgAntiEntropy/index.php?auth_key=XXX&sign=XXX
 * **随意点开一章，阅读几页，以便自动初始化部分全局变量**
 * F12进入开发者模式

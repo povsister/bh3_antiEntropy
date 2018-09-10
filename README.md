@@ -10,6 +10,7 @@ A js script to auto-get all collections for bh3 Anti-Entropy adventure game
 * **随意点开一章，阅读几页，以便自动初始化部分全局变量**
 * F12进入开发者模式
 * **Ctrl+F8 取消所有断点调试。即toggle Activate breakpoint**
+* **再次刷新页面 或 按F8 或 点击蓝色箭头 继续脚本执行**
 * 在Console键入以下js代码并回车。**若出现操作频繁等问题，请参考Notice部分**
 ```
 function my_post_achievement(str_ach, now_galgame, now_scene){
@@ -122,7 +123,7 @@ for (let i = 1; i <= 26; i++) {
 
 部分代码摘抄自米忽悠前端，风格不保证统一
 
-**若出现操作频繁等问题，请手动修改上方代码最后一个for循环的起始及终止条件，间隔一段时间分批次提交成就**
+**若出现操作频繁等问题，请手动修改上方代码最后一个for循环的起始及终止条件，间隔一段时间（半小时以上）分批次提交成就**
 
 **例如**
 ```

@@ -6,10 +6,11 @@ A js script to auto-get all collections for bh3 Anti-Entropy adventure game
 ## Usage
 
 * 获取自己游戏帐号的auth_key与sign hash，可以[参考这里](http://bbs.ngacn.cc/read.php?tid=14608507)
-* 使用浏览器登录 https://event.bh3.com/avgAntiEntropy/index.php?auth_key=XXX&sign=XXX
-* （建议）随意点开一章，阅读几页，以便自动初始化部分全局变量
+* 使用浏览器(Chrome kernel)登录 https://event.bh3.com/avgAntiEntropy/index.php?auth_key=XXX&sign=XXX
+* **随意点开一章，阅读几页，以便自动初始化部分全局变量**
 * F12进入开发者模式
-* 在Console键入以下js代码并回车
+* **Ctrl+F8 取消所有断点调试。即toggle Activate breakpoint**
+* 在Console键入以下js代码并回车。**若出现操作频繁等问题，请参考Notice部分**
 ```
 function my_post_achievement(str_ach, now_galgame, now_scene){
     var ajax_answer = null;
@@ -23,7 +24,7 @@ function my_post_achievement(str_ach, now_galgame, now_scene){
             scene:now_scene},
         async:ajax_async,
         success:function(result) {
-            console.log("章节"+now_galgame+"场景"+now_scene+". 状态："+result.msg+"\n code:"+result.achievement);
+            $('.award-log').append("章节"+now_galgame+"场景"+now_scene+". 状态："+result.msg+"\n code:"+result.achievement+"</br>");
         },
         error:function(XMLHttpRequest, textStatus, errorThrown){
             console.log(XMLHttpRequest);
@@ -104,6 +105,11 @@ function pa(sceneList, now_galgame) {
         }
     }
 }
+for (let itl = 1; itl < 1000; itl++) {
+    clearInterval(itl);
+}
+$('.black').css('overflow', 'scroll');
+$('.black').append('<div style="position:absolute; left:0px; top:0px; text-align:left; margin:5px; background-color:white; z-index:1000" class="award-log">Log output</br></div>');
 
 for (let i = 1; i <= 26; i++) {
     galgame(i);
@@ -112,9 +118,19 @@ for (let i = 1; i <= 26; i++) {
 
 ## Notice
 
-仅在Chrome 66.0.3359.139 上测试通过。其他浏览器不保证兼容性
+仅在Chrome 68.0.3440.75 上测试通过。其他浏览器不保证兼容性
 
 部分代码摘抄自米忽悠前端，风格不保证统一
+
+**若出现操作频繁等问题，请手动修改上方代码最后一个for循环的起始及终止条件，间隔一段时间分批次提交成就**
+
+**例如**
+```
+for (let i = 1; i <= 8; i++) {
+    galgame(i);
+}
+```
+**代表本次仅完成1-8章的所有成就**
 
 ## License
 

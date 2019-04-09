@@ -1,3 +1,5 @@
+## This repo is no longer maintained. The successor is [Go-bh3-VisualNovel](https://github.com/povsister/Go-bh3-VisualNovel).
+
 # bh3_antiEntropy
 A js script to auto-get all collections for bh3 Anti-Entropy adventure game
 
